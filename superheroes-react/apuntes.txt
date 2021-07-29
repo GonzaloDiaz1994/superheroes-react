@@ -14,6 +14,9 @@ home va a tener una lista de todos los superheroes
 
 descripcion de la app:
     aca explico los hooks, librerias, api que usé
+    - react-router-dom
+    - react-bootstrap
+    - axios
 
 un buscador por nombre.
 te retorna una imagen del superheroe con el nombre.
