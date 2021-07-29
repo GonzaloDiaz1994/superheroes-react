@@ -1,0 +1,39 @@
+secciones:
+
+
+navbar
+    loguito
+    home
+    descripcion de la app
+    buscador por nombre
+
+home va a tener una lista de todos los superheroes
+    con paginacion(es la idea)
+    la lista va a ser con imagen y nombre
+    podes hacer click y te va a mostrar sus estadisticas.
+
+descripcion de la app:
+    aca explico los hooks, librerias, api que usé
+
+un buscador por nombre.
+te retorna una imagen del superheroe con el nombre.
+al hacer click vas a poder ver todas sus estadisticas
+
+
+---------rutas------------
+
+/
+/home ===> Home
+/about ===> About
+/search?={nombre} ====> Result
+/superheroe/:id ====> SuperHeroe
+
+componentes:
+    Home
+    About
+    Result
+    SuperHeroe
+
+funciones:
+    Routes
+    PublicRoutes
