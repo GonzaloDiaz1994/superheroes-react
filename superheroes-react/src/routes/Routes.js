@@ -12,10 +12,11 @@ const Routes = () =>{
     return(
         <BrowserRouter>
             <Switch>
+                <PublicRoute exact path='/' component={Home}/>
+                <PublicRoute path='/home' component={Home}/>
                 <PublicRoute path='/superhero/:id' component={Superhero}/>
                 <PublicRoute path='/about' component={About}/>
                 <PublicRoute path='/search/:name' component={Results}/>
-                <PublicRoute path='/' component={Home}/>
                 <PublicRoute path='*' component={NotFound}/>
             </Switch>
         </BrowserRouter>

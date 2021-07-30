@@ -32,7 +32,6 @@ const Results = () => {
                     <SuperheroItem hero={hero}/>
                 ))}
             </Row>
-
         </div>
     )
 }

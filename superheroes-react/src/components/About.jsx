@@ -8,7 +8,7 @@ const About = () => {
             <NavBar/>
             <h2>Librerias utilizadas</h2>
             <p>react-bootstrap</p>
-            <p>react-reouter-dom</p>
+            <p>react-router-dom</p>
             <p>axios</p>
             <hr/>
             <h2>Hook utilizados</h2>

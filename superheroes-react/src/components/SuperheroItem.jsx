@@ -13,7 +13,7 @@ const SuperheroItem = (props) =>{
     return(
             <Card >
                 <Col>
-                    <Card.Img style={{ width: '20rem' }} onClick={goToSuperHero} src={props.hero?.image?.url}/>
+                    <Card.Img style={{ width: '10rem' }} onClick={goToSuperHero} src={props.hero?.image?.url}/>
                     <Card.Body>
                         <Card.Title>{props.hero?.name}</Card.Title>
                     </Card.Body>

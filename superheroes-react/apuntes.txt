@@ -13,7 +13,7 @@ home va a tener una lista de todos los superheroes
     podes hacer click y te va a mostrar sus estadisticas.
 
 descripcion de la app:
-    aca explico los hooks, librerias, api que usé
+    hooks, librerias, api que usé
     - react-router-dom
     - react-bootstrap
     - axios

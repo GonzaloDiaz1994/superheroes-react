@@ -5,7 +5,7 @@ import Appearance from "./Appearance";
 import Work from "./Work";
 import Connections from "./Connections";
 
-const Description = (props) =>{
+const  Description = (props) =>{
 
     return(
         <div>
