@@ -1,7 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {Navbar, Nav, Form, FormControl, Button} from "react-bootstrap"
+import {Link, useHistory} from "react-router-dom";
 
 const NavBar = () =>{
+
+    const history = useHistory();
+    const [input, setInput] = useState('');
+
+    const handleInputChange = (event) =>{
+        setInput(event.target.value);
+    }
 
     return(
         <Navbar bg="light" expand="lg">
@@ -22,9 +30,13 @@ const NavBar = () =>{
                         type="search"
                         placeholder="Search"
                         className="me-1"
+                        onChange={handleInputChange}
+                        value={input}
                         aria-label="Search"
                     />
-                    <Button variant="outline-success">Search</Button>
+                    <Link to={`/search/${input}`}>
+                        <Button variant="outline-success" >Search</Button>
+                    </Link>
                 </Form>
             </Navbar.Collapse>
         </Navbar>

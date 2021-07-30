@@ -14,7 +14,7 @@ const Routes = () =>{
             <Switch>
                 <PublicRoute path='/superhero/:id' component={Superhero}/>
                 <PublicRoute path='/about' component={About}/>
-                <PublicRoute path='/result' component={Results}/>
+                <PublicRoute path='/search/:name' component={Results}/>
                 <PublicRoute path='/' component={Home}/>
                 <PublicRoute path='*' component={NotFound}/>
             </Switch>

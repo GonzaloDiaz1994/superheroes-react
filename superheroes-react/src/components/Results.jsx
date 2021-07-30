@@ -1,12 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import {useParams} from "react-router-dom";
+import {useStore} from "../store/StoreProvider";
+import SuperheroItem from "./SuperheroItem";
+import NavBar from "./NavBar";
+import { Row} from "react-bootstrap";
 
 const Results = () => {
 
+    const {name} = useParams()
+    const {token_api} = useStore()
+    const [heroes, setHeroes] = useState([]);
 
+    useEffect(()=>{
+        getHeroes();
+    },[name])
 
+    const getHeroes = () =>{
+
+        axios.get(`https://superheroapi.com/api.php/${token_api}/search/${name}`)
+            .then((response) => {setHeroes(response.data.results)
+                console.log(response.data.results)})
+            .catch((error) => console.log(error));
+    }
 
     return(
         <div>
+            <NavBar/>
+            <Row xs={6} md={4}>
+                {heroes?.map((hero) => (
+                    <SuperheroItem hero={hero}/>
+                ))}
+            </Row>
 
         </div>
     )

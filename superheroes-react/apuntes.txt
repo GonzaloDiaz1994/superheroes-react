@@ -40,3 +40,44 @@ componentes:
 funciones:
     Routes
     PublicRoutes
+
+
+--------------------paginacion--------------------------
+
+numero=6;
+index = 6;
+lista = []
+
+buscar 10 heroes con la api, osea 10 llamados.
+
+
+useEffect ()=>{
+    getHero()
+}, [numero]
+
+getHero() =>{
+    axios.get(url/id/image)
+        .then((response) => setLista(..., response)
+        .catch(error)
+}
+
+cuando toco siguiente, aumento 6
+setLista([])
+index = 6
+while index>0 && !numero==373
+numero++;
+index--
+
+cuando toco atras =
+setLista([])
+index = 6
+while index>0 && !numero == 0
+numero--;
+index--;
+
+
+
+
+
+
+
