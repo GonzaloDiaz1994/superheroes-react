@@ -12,7 +12,7 @@ const NavBar = () =>{
     }
 
     return(
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="primary" variant="dark" expand="lg">
             <Navbar.Brand href="/">wiki-hero</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
@@ -29,13 +29,13 @@ const NavBar = () =>{
                     <FormControl
                         type="search"
                         placeholder="Search"
-                        className="me-1"
+                        className="form-control me-2"
                         onChange={handleInputChange}
                         value={input}
                         aria-label="Search"
                     />
                     <Link to={`/search/${input}`}>
-                        <Button variant="outline-success" >Search</Button>
+                        <Button type='submit' variant="outline-success" >Search</Button>
                     </Link>
                 </Form>
             </Navbar.Collapse>

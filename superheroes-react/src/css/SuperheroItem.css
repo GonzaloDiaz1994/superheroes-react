@@ -1,0 +1,30 @@
+.itemCard{
+    text-align: center;
+
+    width: 60%;
+    padding-left: 0%;
+    padding-right: 0%;
+
+}
+
+.itemTitle{
+    text-align: center;
+    margin-top: 1em;
+    font-family: "Helvetica";
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.itemCol{
+    text-align: center;
+
+}
+
+.cardHero{
+    text-align: center;
+    padding-right: 0%;
+    padding-left: 0%;
+    padding-top: 1%;
+    background-color: #1f306e;
+
+}

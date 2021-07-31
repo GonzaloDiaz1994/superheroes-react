@@ -5,6 +5,7 @@ import {useStore} from "../store/StoreProvider";
 import {useHistory, useLocation} from "react-router-dom";
 import {Row} from "react-bootstrap";
 import SuperheroItem from "./SuperheroItem";
+import '../css/Home.css'
 
 const Home = () =>{
 
@@ -65,12 +66,27 @@ const Home = () =>{
     return(
         <div>
             <NavBar/>
+            <div className='container-fluid'>
+                {allHeroes()}
+                <div  className="pagination1">
+                    <nav >
+                        <ul className="pagination pagination1">
+                            <li className="page-item">
+                                <button type="button" className="btn btn-info page-link" onClick={previousPage}>previous</button>
+                            </li>
+                            <li className="page-item active" aria-current="page">
+                                <span className="page-link">{page}</span>
+                            </li>
+                            <li className="page-item">
+                                <button type="button" className="btn btn-info page-link" onClick={nextPage}>next</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-            {allHeroes()}
 
-            <button onClick={previousPage}>previous</button>
-            {page}
-            <button onClick={nextPage}>next</button>
+            </div>
+
         </div>
     )
 }
