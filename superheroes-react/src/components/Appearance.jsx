@@ -1,18 +1,25 @@
 import React from "react";
+import {Accordion} from "react-bootstrap";
 
-const Appearance = (props) =>{
+const Appearance = (props) => {
 
 
-    return(
-        <div>
-            <h4>Appearance</h4>
-            Gender: {props.appearance?.gender}<br/>
-            Race: {props.appearance?.race}<br/>
-            Height: {props.appearance?.height[1]}<br/>
-            Weight: {props.appearance?.weight[1]}<br/>
-            Eye color: {props.appearance?.["eye-color"]}<br/>
-            Hair color: {props.appearance?.["hair-color"]}<br/>
-        </div>
+    return (
+        <>
+            <Accordion>
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>Appearance</Accordion.Header>
+                    <Accordion.Body>
+                        Gender: {props.appearance?.gender}<br/>
+                        Race: {props.appearance?.race}<br/>
+                        Height: {props.appearance?.height[1]}<br/>
+                        Weight: {props.appearance?.weight[1]}<br/>
+                        Eye color: {props.appearance?.["eye-color"]}<br/>
+                        Hair color: {props.appearance?.["hair-color"]}<br/>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+        </>
     )
 }
 

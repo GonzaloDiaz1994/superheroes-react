@@ -58,7 +58,7 @@ const Home = () =>{
     const allHeroes = () => {
         return(<Row xs={6} md={5}>
             {heroList?.map((hero) => (
-                <SuperheroItem hero={hero}/>
+                <SuperheroItem hero={hero} key={hero.id}/>
             ))}
         </Row>)
     }
@@ -83,10 +83,7 @@ const Home = () =>{
                         </ul>
                     </nav>
                 </div>
-
-
             </div>
-
         </div>
     )
 }

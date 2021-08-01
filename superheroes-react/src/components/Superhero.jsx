@@ -6,6 +6,7 @@ import Description from "./Description";
 import Image from "./Image";
 import {useStore} from "../store/StoreProvider";
 import {useParams} from "react-router-dom";
+import '../css/Superhero.css'
 
 const Superhero = () => {
 
@@ -28,17 +29,16 @@ const Superhero = () => {
     return(
         <div>
             <NavBar/>
-            <Container>
+            <Container fluid>
                 <Row>
-                    <Col md="auto">
-                        <Image image={hero.image}/>
+                    <Col md="auto" style={{paddingTop:'0.5%'}}>
+                        <Image image={hero.image} />
                     </Col>
                     <Col>
                         <Description hero={hero}/>
                     </Col>
                 </Row>
             </Container>
-
         </div>
     )
 }

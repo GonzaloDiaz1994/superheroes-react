@@ -5,17 +5,17 @@ import Appearance from "./Appearance";
 import Work from "./Work";
 import Connections from "./Connections";
 
-const  Description = (props) =>{
+const Description = (props) => {
 
-    return(
-        <div>
+    return (
+        <>
             <h1>{props.name}</h1>
-            <Biography bio={props.hero?.biography}/>
-            <Appearance appearance={props.hero?.appearance}/>
-            <Work work={props.hero?.work}/>
-            <Connections connections={props.hero?.connections}/>
-            <Stats stats={props.hero?.powerstats}/>
-        </div>
+            <Biography bio={props.hero?.biography} key={props.hero?.id}/>
+            <Appearance appearance={props.hero?.appearance} key={props.hero?.id}/>
+            <Work work={props.hero?.work} key={props.hero?.id}/>
+            <Connections connections={props.hero?.connections} key={props.hero?.id}/>
+            <Stats stats={props.hero?.powerstats} key={props.hero?.id}/>
+        </>
     )
 }
 
