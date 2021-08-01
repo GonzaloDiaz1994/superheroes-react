@@ -1,0 +1,23 @@
+
+.itemTitle{
+    text-align: center;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.itemCol{
+    background-color: blanchedalmond;
+}
+
+
+.cardHero{
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+.itemImg {
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+}

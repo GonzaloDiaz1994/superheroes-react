@@ -13,7 +13,10 @@ home va a tener una lista de todos los superheroes
     podes hacer click y te va a mostrar sus estadisticas.
 
 descripcion de la app:
-    aca explico los hooks, librerias, api que usé
+    hooks, librerias, api que usé
+    - react-router-dom
+    - react-bootstrap
+    - axios
 
 un buscador por nombre.
 te retorna una imagen del superheroe con el nombre.
@@ -37,3 +40,44 @@ componentes:
 funciones:
     Routes
     PublicRoutes
+
+
+--------------------paginacion--------------------------
+
+numero=6;
+index = 6;
+lista = []
+
+buscar 10 heroes con la api, osea 10 llamados.
+
+
+useEffect ()=>{
+    getHero()
+}, [numero]
+
+getHero() =>{
+    axios.get(url/id/image)
+        .then((response) => setLista(..., response)
+        .catch(error)
+}
+
+cuando toco siguiente, aumento 6
+setLista([])
+index = 6
+while index>0 && !numero==373
+numero++;
+index--
+
+cuando toco atras =
+setLista([])
+index = 6
+while index>0 && !numero == 0
+numero--;
+index--;
+
+
+
+
+
+
+
