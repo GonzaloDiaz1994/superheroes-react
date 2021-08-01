@@ -6,10 +6,10 @@ const Appearance = (props) => {
 
     return (
         <>
-            <Accordion>
+            <Accordion className='fonts'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Appearance</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Body className='backgroundInfo'>
                         Gender: {props.appearance?.gender}<br/>
                         Race: {props.appearance?.race}<br/>
                         Height: {props.appearance?.height[1]}<br/>

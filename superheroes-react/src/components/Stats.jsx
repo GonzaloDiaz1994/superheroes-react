@@ -34,10 +34,10 @@ const Stats = (props) => {
 
     return (
         <>
-            <Accordion>
+            <Accordion className='fonts'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Stats</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Body className='backgroundInfo'>
                         <Table responsive>
                             {colums()}
                             {rows()}

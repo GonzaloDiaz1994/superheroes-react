@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom";
 import {useStore} from "../store/StoreProvider";
 import SuperheroItem from "./SuperheroItem";
 import NavBar from "./NavBar";
-import { Row} from "react-bootstrap";
+import {Row} from "react-bootstrap";
 
 const Results = () => {
 
@@ -12,27 +12,32 @@ const Results = () => {
     const {token_api} = useStore()
     const [heroes, setHeroes] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         getHeroes();
-    },[name])
+    }, [name])
 
-    const getHeroes = () =>{
+    const getHeroes = () => {
 
         axios.get(`https://superheroapi.com/api.php/${token_api}/search/${name}`)
-            .then((response) => {setHeroes(response.data.results)
-                console.log(response.data.results)})
+            .then((response) => {
+                setHeroes(response.data.results)
+                console.log(response.data.results)
+            })
             .catch((error) => console.log(error));
     }
 
-    return(
-        <div>
+    return (
+        <>
             <NavBar/>
-            <Row xs={6} md={4}>
-                {heroes?.map((hero) => (
-                    <SuperheroItem hero={hero}/>
-                ))}
-            </Row>
-        </div>
+            <div className='container-fluid'>
+                <Row xs={2} md={4} lg={5}>
+                    {heroes?.map((hero) => (
+                        <SuperheroItem hero={hero}/>
+                    ))}
+                </Row>
+            </div>
+
+        </>
     )
 }
 

@@ -5,10 +5,10 @@ const Connections = (props) => {
 
     return (
         <>
-            <Accordion>
+            <Accordion className='fonts'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Connections</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Body className='backgroundInfo'>
                         Group affiliation: {props.connections?.["group-affiliation"]}<br/>
                         Relatives: {props.connections?.relatives}
                     </Accordion.Body>

@@ -4,10 +4,10 @@ import {Accordion} from "react-bootstrap";
 const Work = (props) => {
     return (
         <>
-            <Accordion>
+            <Accordion className='fonts'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Work</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Body className='backgroundInfo'>
                         Occupation: {props.work?.occupation}<br/>
                         Base: {props.work?.base}
                     </Accordion.Body>

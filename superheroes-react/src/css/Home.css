@@ -1,4 +1,4 @@
 .pagination1{
-    text-align: center;
-    margin-top: 1%;
+    display:table;
+    margin: 1% auto 0;
 }

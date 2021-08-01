@@ -6,6 +6,8 @@ import {useHistory, useLocation} from "react-router-dom";
 import {Row} from "react-bootstrap";
 import SuperheroItem from "./SuperheroItem";
 import '../css/Home.css'
+import Pagination from "./Pagination";
+
 
 const Home = () =>{
 
@@ -25,6 +27,7 @@ const Home = () =>{
     },[page])
 
     const getHeroList = () => {
+            setHeroList([])
             for (let i = size; i < size + limit; i++) {
                 axios.get(`https://superheroapi.com/api.php/${token_api}/${i}`)
                     .then((response) => setHeroList(heroList=>[...heroList,response.data]))
@@ -33,7 +36,6 @@ const Home = () =>{
     }
 
     const nextPage = () =>{
-        setHeroList([])
         if(size + limit > lastId){
             query.set('size', lastId - limit)
         }else {
@@ -44,19 +46,17 @@ const Home = () =>{
     }
 
     const previousPage = () =>{
-        setHeroList([])
-        if(size - limit >0 ){
+        if(size - limit > 0 ){
             query.set('size', size - limit )
             setPAge(page - 1)
         }else{
             query.set('size', 1);
-            setPAge(1)
         }
         history.push(`/home?size=${query.get('size')}&limit=${query.get('limit')}`)
     }
 
     const allHeroes = () => {
-        return(<Row xs={6} md={5}>
+        return(<Row xs={2} md={4} lg={5}>
             {heroList?.map((hero) => (
                 <SuperheroItem hero={hero} key={hero.id}/>
             ))}
@@ -68,21 +68,7 @@ const Home = () =>{
             <NavBar/>
             <div className='container-fluid'>
                 {allHeroes()}
-                <div  className="pagination1">
-                    <nav >
-                        <ul className="pagination pagination1">
-                            <li className="page-item">
-                                <button type="button" className="btn btn-info page-link" onClick={previousPage}>previous</button>
-                            </li>
-                            <li className="page-item active" aria-current="page">
-                                <span className="page-link">{page}</span>
-                            </li>
-                            <li className="page-item">
-                                <button type="button" className="btn btn-info page-link" onClick={nextPage}>next</button>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <Pagination page={page} previous={previousPage} next={nextPage}/>
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import StoreProvider from "./store/StoreProvider";
 
 const App = () =>{
     return(
-        <div>
+        <div className='fontsAll'>
             <StoreProvider>
                 <Routes/>
             </StoreProvider>
