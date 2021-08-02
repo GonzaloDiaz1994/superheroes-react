@@ -1,15 +1,21 @@
 import React, {useState} from "react";
 import {Navbar, Nav, Form, FormControl, Button} from "react-bootstrap"
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import '../css/NavBar.css'
 
 const NavBar = () => {
 
     const [input, setInput] = useState('');
+    const history = useHistory();
+
+    const goTohero = () => {
+        history.push(`/search/${input}`)
+    }
 
     const handleInputChange = (event) => {
         setInput(event.target.value);
     }
+
 
     return (
         <Navbar bg="primary" variant="dark" expand="lg">
@@ -33,9 +39,7 @@ const NavBar = () => {
                         value={input}
                         aria-label="Search"
                     />
-                    <Link to={`/search/${input}`}>
-                        <Button type='submit' variant="success">Search</Button>
-                    </Link>
+                    <Button disabled={(input === '')} type='submit' onClick={goTohero} variant="success">Search</Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>
