@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import {useParams} from "react-router-dom";
-import {useStore} from "../store/StoreProvider";
 import SuperheroItem from "./SuperheroItem";
 import NavBar from "./NavBar";
 import {Row} from "react-bootstrap";
+import Api from "../api/Api";
 
 const Results = () => {
 
     const {name} = useParams()
-    const {token_api} = useStore()
     const [heroes, setHeroes] = useState([]);
 
     useEffect(() => {
@@ -18,10 +16,9 @@ const Results = () => {
 
     const getHeroes = () => {
 
-        axios.get(`https://superheroapi.com/api.php/${token_api}/search/${name}`)
+        Api.searchHero(name)
             .then((response) => {
                 setHeroes(response.data.results)
-                console.log(response.data.results)
             })
             .catch((error) => console.log(error));
     }
@@ -36,7 +33,6 @@ const Results = () => {
                     ))}
                 </Row>
             </div>
-
         </>
     )
 }

@@ -22,7 +22,6 @@ const SuperheroItem = (props) => {
                 </Col>
             </Card>
         </Container>
-
     )
 }
 

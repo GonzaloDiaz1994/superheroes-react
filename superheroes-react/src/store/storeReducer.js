@@ -1,22 +1,22 @@
 const types = {
-    CHANGE_TOKEN : 'CHANGE_TOKEN'
+    CHANGE_LAST_ID: 'CHANGE_LAST_ID'
 }
 
 const initialStore = {
-    token_api: 855471748696658
+    last_id: 731
 }
 
 const storeReducer = (state, action) => {
-    switch(action.type) {
-        case types.CHANGE_TOKEN:
+    switch (action.type) {
+        case types.CHANGE_LAST_ID:
             return {
                 ...state,
-                token_api: action.payload
+                last_id: action.payload
             }
         default:
             return state;
     }
 }
 
-export { initialStore, types }
+export {initialStore, types}
 export default storeReducer

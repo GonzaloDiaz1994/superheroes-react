@@ -4,7 +4,7 @@ const Pagination = (props) => {
 
     return (
         <>
-            <nav >
+            <nav>
                 <div className='pagination1'>
                     <ul className="pagination">
                         <li className="page-item">

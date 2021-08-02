@@ -7,9 +7,9 @@ import Home from "../components/Home";
 import Results from "../components/Results";
 import NotFound from "../components/NotFound";
 
-const Routes = () =>{
+const Routes = () => {
 
-    return(
+    return (
         <BrowserRouter>
             <Switch>
                 <PublicRoute exact path='/' component={Home}/>

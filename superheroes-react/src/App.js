@@ -3,8 +3,8 @@ import Routes from "./routes/Routes";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import StoreProvider from "./store/StoreProvider";
 
-const App = () =>{
-    return(
+const App = () => {
+    return (
         <div className='fontsAll'>
             <StoreProvider>
                 <Routes/>

@@ -13,7 +13,9 @@ const Biography = (props) => {
                         Full name: {props.bio?.["full-name"]}<br/>
                         Alter egos: {props.bio?.["alter-egos"]}<br/>
                         Aliases: {props.bio?.aliases.map((a) => (
-                        <ul className='aliasesList'><li>{a}</li></ul>))}
+                        <ul className='aliasesList'>
+                            <li>{a}</li>
+                        </ul>))}
                         Place of birth: {props.bio?.["place-of-birth"]}<br/>
                         First appearance: {props.bio?.["first-appearance"]}<br/>
                         Publisher: {props.bio?.publisher}<br/>
